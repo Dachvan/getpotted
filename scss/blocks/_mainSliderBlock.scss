@@ -1,0 +1,192 @@
+.main-slider-block {
+    border-radius: 60px;
+    @media screen and(max-width: 1275px) {
+        border-radius: 36px;
+    }
+    @media screen and(max-width: 568px) {
+        border-radius: 20px;
+    }
+    &__element {
+        position: relative;
+        width: 100%;
+        min-height: 500px;
+        padding: 0px 80px 40px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and(max-width: 1275px) {
+            padding: 0px 40px 40px;
+        }
+        @media screen and(max-width: 1024px) {
+            min-height: 320px;
+        }
+        @media screen and(max-width: 568px) {
+            min-height: 530px;
+            justify-content: flex-start;
+        }
+    }
+    &__content {
+        max-width: 330px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        @media screen and(max-width: 568px) {
+            max-width: 100%;
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+        margin-bottom: 15px;
+        @media screen and(max-width: 1024px) {
+            font-size: 24px;
+            line-height: 34px;
+        }
+        @media screen and(max-width: 568px) {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+    &__desc {
+        font-size: 18px;
+        line-height: 26px;
+        color: #FFFFFF;
+        @media screen and(max-width: 1024px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        @media screen and(max-width: 568px) {
+            text-align: center;
+        }
+    }
+    &__link {
+        display: inline-block;
+        margin-top: 60px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 26px;
+        color: #FFFFFF;
+        @media screen and(max-width: 1024px) {
+            margin-top: 40px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        @media screen and(max-width: 568px) {
+            text-align: center;
+            margin-top: 40px;
+        }
+    }
+    &__pic {
+        position: absolute;
+        display: block;
+        margin: auto;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media screen and(max-width: 568px) {}
+    }
+    &__prev {
+        width: 9px;
+        height: 17px;
+        left: 0px;
+        margin: 0px;
+        top: 0;
+        &::after {
+            display: none;
+        }
+        svg {
+            transform: rotate(180deg);
+            fill: #ffffff;
+        }
+    }
+    &__next {
+        width: 9px;
+        height: 17px;
+        right: 0px;
+        margin: 0px;
+        top: 0;
+        &::after {
+            display: none;
+        }
+        svg {
+            fill: #ffffff;
+        }
+    }
+    &__nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 50px;
+        padding: 0px 80px;
+        box-sizing: border-box;
+        @media screen and(max-width: 1275px) {
+            bottom: 26px;
+            padding: 0px 40px;
+        }
+    }
+    &__dots {
+        width: 100%;
+        height: 6px;
+        position: relative;
+    }
+    &__arrows {
+        position: relative;
+        display: flex;
+        min-width: 58px;
+        max-width: 58px;
+        height: 16px;
+        z-index: 9;
+    }
+    &__pagination {
+        span {
+            position: relative;
+            width: 6px;
+            height: 6px;
+            background: #ffffff;
+            opacity: 1;
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0px;
+            }
+            &.swiper-pagination-bullet-active {
+                &:before {
+                    content: '';
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    border: 1px solid #ffffff;
+                    box-sizing: border-box;
+                    position: absolute;
+                    display: block;
+                    top: 0px;
+                    bottom: 0px;
+                    left: -28px;
+                    right: -28px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

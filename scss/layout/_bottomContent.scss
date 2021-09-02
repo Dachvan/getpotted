@@ -1,0 +1,156 @@
+.bottom-content {
+    background: #F4F5F6;
+    border-radius: 60px 60px 0px 0px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    @media screen and(max-width: 1275px) {
+        border-radius: 35px 35px 0px 0px;
+    }
+    @media screen and(max-width: 1024px) {
+        padding-top: 30px;
+    }
+    @media screen and(max-width: 568px) {
+        padding-top: 15px;
+    }
+    &__wrapper {
+        max-width: 1370px;
+        width: 100%;
+        margin: 0px auto;
+        padding: 0px 40px;
+        box-sizing: border-box;
+        @media screen and(max-width: 1275px) {
+            padding: 0px 34px;
+        }
+        @media screen and(max-width: 568px) {
+            padding: 0px 15px;
+        }
+    }
+    &__info {
+        padding: 60px 95px;
+        box-sizing: border-box;
+        background: #EEE2D5;
+        border-radius: 36px;
+        font-size: 18px;
+        text-align: center;
+        color: #404656;
+        line-height: 26px;
+        @media screen and(max-width: 1024px) {
+            padding: 40px 20px 40px;
+            border-radius: 20px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    &__title {
+        margin-top: 80px;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #404656;
+        @media screen and(max-width: 1024px) {
+            margin-top: 60px;
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+    &__desc {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: #777E90;
+        @media screen and(max-width: 1024px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    &__list {
+        margin-top: 42px;
+        padding-left: 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        counter-reset: myCounter;
+        @media screen and(max-width: 1024px) {
+            text-align: left;
+            max-width: 520px;
+            margin: 42px auto 0px;
+        }
+        li {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 24px;
+            list-style: none;
+            display: flex;
+            align-items: flex-start;
+            @media screen and(max-width: 1024px) {
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 20px;
+            }
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            &:before {
+                counter-increment: myCounter;
+                content: counter(myCounter);
+                color: #404656;
+                background: #ffffff;
+                display: inline-block;
+                text-align: center;
+                margin-right: 10px;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 26px;
+                min-width: 30px;
+                max-width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media screen and(max-width: 1024px) {
+                    min-width: 24px;
+                    max-width: 24px;
+                    height: 24px;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+    &__row {
+        display: flex;
+        margin: 82px -15px 0px;
+        @media screen and(max-width: 1275px) {
+            margin: 82px -10px 0px;
+        }
+        @media screen and(max-width: 1024px) {
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+    }
+    &__column {
+        display: flex;
+        flex: 0 1 25%;
+        padding: 0px 15px;
+        box-sizing: border-box;
+        @media screen and(max-width: 1275px) {
+            padding: 0px 10px;
+        }
+        @media screen and(max-width: 1024px) {
+            flex: 0 1 50%;
+            padding-bottom: 20px;
+        }
+        @media screen and(max-width: 750px) {
+            flex: 0 1 100%;
+            padding-bottom: 10px;
+        }
+    }
+}

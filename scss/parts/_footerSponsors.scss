@@ -1,0 +1,19 @@
+.sponsors {
+    display: flex;
+    align-items: center;
+    &__element {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        @media screen and(max-width: 1024px) {
+            margin-right: 18px;
+        }
+    }
+    img {
+        max-width: 100%;
+    }
+}

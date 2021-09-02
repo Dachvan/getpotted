@@ -1,0 +1,116 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header-btn {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    height: 40px;
+    border-radius: 8px;
+    white-space: nowrap;
+    margin-right: 5px;
+    transition: 0.2s ease-in-out;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    &:last-child {
+        margin-right: 0px;
+    }
+    &--mini {
+        max-width: 85px;
+        width: 100%;
+        background: #EAEAEB;
+        color: #404656;
+        &:hover {
+            background: #E4E4E4;
+        }
+    }
+    &--big {
+        max-width: 238px;
+        width: 100%;
+        background: #404656;
+        color: #FFFFFF;
+        svg {
+            fill: #777E90;
+            transition: 0.2s ease-in-out;
+        }
+        &:hover {
+            background: #282D3A;
+            svg {
+                fill: #FFFFFF;
+            }
+        }
+    }
+    &--green {
+        max-width: 305px;
+        height: 60px;
+        background: #3F8167;
+        svg {
+            fill: #FFFFFF;
+        }
+        &:hover {
+            background: #346E57
+        }
+        .header-btn__text {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: -0.02em;
+        }
+    }
+    &__icon {
+        margin-right: 10px;
+    }
+    &__text {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 14px;
+        color: #FFFFFF;
+    }
+}
+
+.menu-button {
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.search-button {
+    cursor: pointer;
+    svg {
+        fill: #404656;
+    }
+}
+
+.perasonal-button {}
+
+.basket-button {
+    position: relative;
+    margin-left: 20px;
+    svg {
+        transition: 0.2s ease-in-out;
+        fill: #404656;
+    }
+    &__count {
+        position: absolute;
+        top: -10px;
+        right: -14px;
+        height: 24px;
+        border-radius: 12px;
+        background: #FFFFFF;
+        font-weight: bold;
+        font-size: 8px;
+        line-height: 10px;
+        color: #3F8167;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0px 6px;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    }
+}
