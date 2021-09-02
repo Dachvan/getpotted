@@ -28,7 +28,9 @@
         }
     }
     &__wrapper {
+        max-width: 1370px;
         padding: 0px 40px;
+        margin: 0px auto;
         box-sizing: border-box;
         @media screen and(max-width: 1275px) {
             padding: 0px 34px;
@@ -55,6 +57,11 @@
             margin-top: 80px;
             margin-bottom: 10px;
         }
+    }
+    &__slider{
+        width: 100%;
+        padding: 0px 40px;
+        box-sizing: border-box;
     }
     &__desc {
         max-width: 1080px;

@@ -50,6 +50,9 @@ $(document).ready(function() {
         $('body').toggleClass('overflow');
         $('.mobile-search').toggleClass('active');
     });
+    $('.js-toggle-filter').on('click', function(){
+        $(this).toggleClass('active').next().toggleClass('active');
+    });
     if ($(window).width() <= 568) {
         $('.js-footer-menu').on('click', function() {
             $(this).toggleClass('active').next().toggle();
@@ -73,7 +76,27 @@ $(document).ready(function() {
             320: {
                 slidesPerView: 'auto',
                 spaceBetween: 10,
-                //freeMode: true,
+            }
+        }
+    });
+    const swiperSection = new Swiper('.js-section-slider', {
+        spaceBetween: 30,
+        scrollbar: {
+            el: '.section-slider__scrollbar',
+        },
+        breakpoints: {
+            1025: {
+                slidesPerView: 8,
+                spaceBetween: 30,
+            },
+            569: {
+                slidesPerView: 4,
+                slidesPerColumn: 2,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
             }
         }
     });
@@ -87,6 +110,31 @@ $(document).ready(function() {
             prevEl: '.main-slider-block__prev',
         },
         effect: 'fade',
+    });
+    const swiperViewed = new Swiper('.js-viewed-slider', {
+        slidesPerView: 4,
+        navigation: {
+            nextEl: '.viewed-slider__next',
+            prevEl: '.viewed-slider__prev',
+        },
+        breakpoints: {
+            1275: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1025: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            569: {
+                spaceBetween: 20,
+                slidesPerView: 2,
+            },
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+        }
     });
     sliderTabs();
 });

@@ -1,0 +1,29 @@
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    &__link {
+        font-size: 14px;
+        line-height: 14px;
+        text-decoration: none;
+        color: #777e90;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        &:after{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 12px;
+            background: #3F8167;
+            margin: 0px 10px;
+        }
+        &.active{
+            color: #404656;
+        }
+        &:last-child{
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
