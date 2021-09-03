@@ -1897,6 +1897,120 @@
   max-width: 100%;
 }
 
+.filter-slider__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter-slider__info {
+  width: 100px;
+  padding: 10px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  background: #e2eae8;
+}
+
+.filter-slider__name {
+  font-size: 14px;
+  line-height: 14px;
+  color: #3f8167;
+  margin-bottom: 5px;
+}
+
+.filter-slider__poly {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #404656;
+  background: transparent;
+  border: 0px;
+  width: 100%;
+  height: 14px;
+  padding: 0px 0px 0px 5px;
+}
+
+.filter-slider__poly::-webkit-input-placeholder {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #404656;
+}
+
+.filter-slider__poly:-ms-input-placeholder {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #404656;
+}
+
+.filter-slider__poly::-ms-input-placeholder {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #404656;
+}
+
+.filter-slider__poly::placeholder {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #404656;
+}
+
+.filter-slider__poly_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.filter-slider__poly_text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #404656;
+}
+
+.filter-slider__line {
+  margin-top: 26px;
+  height: 2px;
+  border: 0px;
+  background: #C9CEDA;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.filter-slider__line .noUi-connect {
+  background: #3F8167;
+}
+
+.filter-slider__line .noUi-handle {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #3F8167;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.filter-slider__line .noUi-handle:before, .filter-slider__line .noUi-handle:after {
+  display: none;
+}
+
 .top-menu {
   display: -webkit-box;
   display: -ms-flexbox;
