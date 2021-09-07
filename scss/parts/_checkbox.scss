@@ -22,10 +22,21 @@
         display: none;
         &:checked{
             ~ span{
+                position: relative;
                 border: 1px solid #3F8167;
-                background: #3F8167 url("/img/check-white.svg") no-repeat;
-                background-position: center;
-                background-size: 14px;
+                background: #3F8167;
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 22px;
+                    height: 22px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background: url("/img/check-white.svg") no-repeat;
+                    background-position: center;
+                    background-size: 11px;
+                }
             }
             ~ .checkbox__text{
                 color: #3F8167;
@@ -36,6 +47,10 @@
         font-size: 18px;
         line-height: 18px;
         color: #404656;
+        transition: 0.2s ease-in-out;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     &--collor{
         span{
@@ -45,6 +60,50 @@
             &:checked{
                 ~ span{
                     border: 1px solid #777E90;
+                }
+            }
+        }
+    }
+}
+.checkbox-2{
+    display: flex;
+    align-items: center;
+    span{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+        color: #404656;
+        margin-right: 10px;
+    }
+    input{
+        display: none;
+        + label{
+            width: 54px;
+            height: 32px;
+            position: relative;
+            background: #C9CEDA;
+            border-radius: 16px;
+            cursor: pointer;
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 5px;
+                bottom: 0;
+                margin: auto;
+                width: 22px;
+                height: 22px;
+                background: #ffffff;
+                border-radius: 50%;
+            }
+        }
+        &:checked{
+            + label{
+                background: #3F8167;
+                &:before{
+                    right: 5px;
+                    left: auto;
                 }
             }
         }

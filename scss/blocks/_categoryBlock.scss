@@ -69,7 +69,6 @@
         justify-content: center;
         flex-direction: column;
         padding-bottom: 0px;
-        box-sizing: border-box;
         transition: 0.3s linear;
         @media screen and(max-width: 568px) {
             background: transparent;
@@ -89,7 +88,6 @@
         text-align: center;
         color: #404656;
         padding: 0px 10px;
-        box-sizing: border-box;
         @media screen and(max-width: 568px) {
             font-size: 16px;
             line-height: 22px;
@@ -101,7 +99,6 @@
         text-align: center;
         color: #777E90;
         padding: 0px 10px;
-        box-sizing: border-box;
         @media screen and(max-width: 568px) {
             font-size: 12px;
             line-height: 14px;

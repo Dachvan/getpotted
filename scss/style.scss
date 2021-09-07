@@ -1,3 +1,42 @@
+*{
+    font-family: 'DM Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+input,
+button,
+textarea{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+html,
+body{
+    height: 100%;
+}
+body {
+    background: #F4F5F6;
+    &.overflow {
+        overflow-y: hidden;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 153px;
+    overflow-x: hidden;
+    @media screen and(max-width: 1275px) {
+        padding-top: 80px;
+    }
+}
 @import "fonts/dm_sans",
 "layout/header",
 "layout/main",
@@ -29,27 +68,9 @@
 "blocks/infoBlock",
 "blocks/itemBlock",
 "blocks/tabs",
+"blocks/navigation",
+"blocks/tags",
 "blocks/subscriptionBlock",
 "blocks/categoryBlock",
 "blocks/slidersBlock",
 "blocks/benefitBlock";
-
-/*Временный стиль*/
-
-body {
-    background: #F4F5F6;
-    &.overflow {
-        overflow-y: hidden;
-    }
-}
-
-.wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 153px;
-    overflow-x: hidden;
-    @media screen and(max-width: 1275px) {
-        padding-top: 80px;
-    }
-}

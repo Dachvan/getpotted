@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/normalize.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
     <style>
         html,
@@ -20,44 +20,111 @@
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
             color: #000;
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
-        }
-        
-        .swiper-container {}
-        
-        .swiper-slide {
-            background: #fff;
-            height: calc((100% - 30px) / 2);
+            max-width: 300px;
+
         }
     </style>
 </head>
 
 <body>
-    <div class="swiper-container mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
+    <div class="filter-slider">
+        <div class="filter-slider__group">
+            <div class="filter-slider__info">
+                <div class="filter-slider__name">From</div>
+                <div class="filter-slider__poly_content">
+                    <div class="filter-slider__poly_text">£</div>
+                    <input class="filter-slider__poly" type="text" id="price-min" placeholder="0">
+                </div>
+            </div>
+            <div class="filter-slider__info">
+                <div class="filter-slider__name">To</div>
+                <div class="filter-slider__poly_content">
+                    <div class="filter-slider__poly_text">£</div>
+                    <input class="filter-slider__poly" type="text" id="price-max" placeholder="1000">
+                </div>
+            </div>
         </div>
+        <div class="filter-slider__line" id="steps-price"></div>
+    </div>
+    <div class="filter-slider">
+        <div class="filter-slider__group">
+            <div class="filter-slider__info">
+                <div class="filter-slider__name">From</div>
+                <div class="filter-slider__poly_content">
+                    <input class="filter-slider__poly" type="text" id="height-min" placeholder="0" hidden>
+                    <div class="filter-slider__poly_text" id="height-min-text">0</div>
+                    <div class="filter-slider__poly_text">cm</div>
+                </div>
+            </div>
+            <div class="filter-slider__info">
+                <div class="filter-slider__name">To</div>
+                <div class="filter-slider__poly_content">
+                    <input class="filter-slider__poly" type="text" id="height-max" placeholder="250" hidden>
+                    <div class="filter-slider__poly_text" id="height-max-text">250</div>
+                    <div class="filter-slider__poly_text">cm</div>
+                </div>
+            </div>
+        </div>
+        <div class="filter-slider__line" id="steps-height"></div>
     </div>
 
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
     <script src="js/script.js" type="module"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
             slidesPerColumn: 2,
             spaceBetween: 30,
+        });
+        var stepsSliderPrice = document.getElementById('steps-price');
+        var minPrice = document.getElementById('price-min');
+        var maxPrice = document.getElementById('price-max');
+        var inputsPrice = [minPrice, maxPrice];
+
+        noUiSlider.create(stepsSliderPrice, {
+            start: [0, 1000],
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 1000
+            }
+        });
+        stepsSliderPrice.noUiSlider.on('update', function(values, handle) {
+            inputsPrice[handle].value = values[handle] == 0 || this.options.range.max == values[handle] ? '' : values[handle];
+        })
+        minPrice.addEventListener('change', function() {
+            stepsSliderPrice.noUiSlider.set([this.value, null]);
+        });
+        maxPrice.addEventListener('change', function() {
+            stepsSliderPrice.noUiSlider.set([null, this.value]);
+        });
+        var stepsSliderHeight = document.getElementById('steps-height');
+        var minHeight = document.getElementById('height-min');
+        var minHeightText = document.getElementById('height-min-text');
+        var maxHeight = document.getElementById('height-max');
+        var maxHeightText = document.getElementById('height-max-text');
+        var inputsHeight = [minHeight, maxHeight];
+        var inputsHeightText = [minHeightText, maxHeightText];
+
+        noUiSlider.create(stepsSliderHeight, {
+            start: [0, 250],
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 250
+            }
+        });
+        stepsSliderHeight.noUiSlider.on('update', function(values, handle) {
+            inputsHeight[handle].value = values[handle] == 0 || this.options.range.max == values[handle] ? '' : Math.round(values[handle]);
+        });
+        stepsSliderHeight.noUiSlider.on('update', function(values, handle) {
+            inputsHeightText[handle].innerHTML = values[handle] == 0 ? '0' : Math.round(values[handle]), this.options.range.max == values[handle] ? '250' : Math.round(values[handle]);
         });
     </script>
 </body>

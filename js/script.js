@@ -10,8 +10,11 @@ $(document).ready(function() {
     $(window).scroll(function() {
         headerPosition();
     });
-    tabs($('.tabs-category__element'), $('.tabs-category__block'));
-    tabs($('.tabs-brand__element'), $('.tabs-brand__block'));
+    tabs($('.tabs-category__element'), $('.tabs-category__block'), false);
+    tabs($('.tabs-brand__element'), $('.tabs-brand__block'), false);
+    tabs($('.js-element-filter'), $('.js-block-filter'), true);
+    tabs($('.js-show-filter'), $('.js-show-block-filter'), true);
+    tabs($('.js-sort-filter'), $('.js-sort-block-filter'), true);
 
     $('.js-search').on('click', function() {
         $(this).parents('.top-panel').toggleClass('active');
@@ -38,6 +41,15 @@ $(document).ready(function() {
     }).mouseleave(function() {
         $('.header, .top-panel').removeClass('theme');
     });
+    $('.js-choose-colour').mouseenter(function() {
+        var pic = $(this).attr('data-img');
+        if (pic) {
+            $(this).parents('.product-block').find('.js-item-pic').attr('src', pic);
+        }
+    }).mouseleave(function() {
+        $(this).parents('.product-block').find('.js-item-pic').attr('src', $(this).parents('.product-block').find('.js-item-pic').data('img'));
+    });
+
     $('.js-mobile-menu').on('click', function() {
         $(this).toggleClass('active');
         $(this).find('.js-menu-toggle').toggle();
@@ -100,6 +112,31 @@ $(document).ready(function() {
             }
         }
     });
+
+    const swiperTopChoise = new Swiper('.js-top-choise-slider', {
+        navigation: {
+            nextEl: '.main-slider-block__next',
+            prevEl: '.main-slider-block__prev',
+        },
+        slidesPerView: 3,
+        spaceBetween: 10,
+        /*breakpoints: {
+            1025: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            569: {
+                slidesPerView: 4,
+                slidesPerColumn: 2,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+            }
+        }*/
+    });
+
     const swiperMain = new Swiper('.js-main-slider', {
         pagination: {
             el: '.main-slider-block__pagination',
@@ -148,13 +185,35 @@ function headerPosition() {
     }
 }
 
-function tabs(classNameNav, classNameTab) {
-    classNameTab.not(':first').addClass('hide');
-    classNameNav.on('click', function() {
-        classNameNav.removeClass('active').eq($(this).index()).addClass('active');
-        classNameTab.addClass('hide').eq($(this).index()).removeClass('hide');
-    }).eq(0).addClass('active');
-
+function tabs(classNameNav, classNameTab, filter) {
+    if(filter == false){
+        classNameTab.not(':first').addClass('hide');
+        classNameNav.on('click', function() {
+            classNameNav.removeClass('active').eq($(this).index()).addClass('active');
+            classNameTab.addClass('hide').eq($(this).index()).removeClass('hide');
+        }).eq(0).addClass('active');
+    }else{
+        classNameNav.on('click', function(){
+            if(!$(this).hasClass('active')){
+                classNameNav.removeClass('active');
+                classNameTab.removeClass('active');
+                $(this).addClass('active').parent().addClass('active');
+                classNameTab.parent().addClass('active');
+                classNameTab.eq($(this).index()).addClass('active');
+            }else{
+                $(this).removeClass('active').parent().removeClass('active');
+                classNameTab.parent().removeClass('active');
+                classNameTab.eq($(this).index()).removeClass('active');
+            }
+        });
+        $(document).mouseup(function (e){
+            var div = classNameTab;
+            if (!div.is(e.target) && div.has(e.target).length === 0) {
+                classNameNav.removeClass('active').parent().removeClass('active');
+                classNameTab.removeClass('active').parent().removeClass('active');
+            }
+        });
+    }
 }
 
 function sliderTabs() {
