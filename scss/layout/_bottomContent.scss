@@ -35,6 +35,7 @@
         text-align: center;
         color: #404656;
         line-height: 26px;
+        margin-bottom: 80px;
         @media screen and(max-width: 1024px) {
             padding: 40px 20px 40px;
             border-radius: 20px;
@@ -43,7 +44,6 @@
         }
     }
     &__title {
-        margin-top: 80px;
         font-weight: bold;
         font-size: 36px;
         line-height: 50px;
@@ -57,7 +57,8 @@
         }
     }
     &__desc {
-        margin-top: 20px;
+        max-width: 1070px;
+        margin: 20px auto 0px;
         font-size: 18px;
         line-height: 26px;
         text-align: center;

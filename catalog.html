@@ -1103,46 +1103,65 @@
                         </div>
                         <h1 class="section-name-block__title">Planters</h1>
                         <div class="section-name-block__desс">For every house</div> 
+                        <picture class="section-name-block__image">
+                            <source media="(max-width: 767px)" srcset="img/temp/pic-section-mobile-2.png">
+                            <img src="img/temp/pic-section.png" alt="">
+                        </picture>
                     </div>
                     <div class="section-links-block">
+                        <div class="section-links-block__title">Popular Filters</div>
                         <div class="section-links-block__row">
-                            <a class="section-links-block__element" href="">
-                                <div class="section-links-block__icon">
-                                    <img src="img/temp/sections/1.svg" alt="">
+                            <div class="popular-filters">
+                                <div class="popular-filters__header js-popular-filter">
+                                    <div class="popular-filters__text">
+                                        Select filter...
+                                        <!--Сюда вместо "Select filter..." будет ставится то, что ВНУТРИ блока "popular-filters__element"-->
+                                    </div>
+                                    <svg width="11" height="6">
+                                        <use xlink:href="#arrow-down"></use>
+                                    </svg>
                                 </div>
-                                <div class="section-links-block__name">Large</div>
-                            </a>
-                            <a class="section-links-block__element" href="">
-                                <div class="section-links-block__icon">
-                                    <img src="img/temp/sections/2.svg" alt="">
+                                <div class="popular-filters__container">
+                                    <a class="popular-filters__element" href="">
+                                        <div class="popular-filters__icon">
+                                            <img src="img/temp/sections/1.svg" alt="">
+                                        </div>
+                                        <div class="popular-filters__name">Large</div>
+                                    </a>
+                                    <a class="popular-filters__element" href="">
+                                        <div class="popular-filters__icon">
+                                            <img src="img/temp/sections/2.svg" alt="">
+                                        </div>
+                                        <div class="popular-filters__name">Outdoor</div>
+                                    </a>
+                                    <a class="popular-filters__element active" href="">
+                                        <div class="popular-filters__icon">
+                                            <img src="img/temp/sections/3.svg" alt="">
+                                        </div>
+                                        <div class="popular-filters__name">Indoor</div>
+                                    </a>
+                                    <a class="popular-filters__element" href="">
+                                        <div class="popular-filters__icon">
+                                            <img src="img/temp/sections/4.svg" alt="">
+                                        </div>
+                                        <div class="popular-filters__name">Square</div>
+                                    </a>
+                                    <a class="popular-filters__element" href="">
+                                        <div class="popular-filters__icon">
+                                            <img src="img/temp/sections/5.svg" alt="">
+                                        </div>
+                                        <div class="popular-filters__name">Tall</div>
+                                    </a>
+                                    <a class="popular-filters__element" href="">
+                                        <div class="popular-filters__icon">
+                                            <img src="img/temp/sections/6.svg" alt="">
+                                        </div>
+                                        <div class="popular-filters__name">Outdoor</div>
+                                    </a>
                                 </div>
-                                <div class="section-links-block__name">Outdoor</div>
-                            </a>
-                            <a class="section-links-block__element active" href="">
-                                <div class="section-links-block__icon">
-                                    <img src="img/temp/sections/3.svg" alt="">
-                                </div>
-                                <div class="section-links-block__name">Indoor</div>
-                            </a>
-                            <a class="section-links-block__element" href="">
-                                <div class="section-links-block__icon">
-                                    <img src="img/temp/sections/4.svg" alt="">
-                                </div>
-                                <div class="section-links-block__name">Square</div>
-                            </a>
-                            <a class="section-links-block__element" href="">
-                                <div class="section-links-block__icon">
-                                    <img src="img/temp/sections/5.svg" alt="">
-                                </div>
-                                <div class="section-links-block__name">Tall</div>
-                            </a>
-                            <a class="section-links-block__element" href="">
-                                <div class="section-links-block__icon">
-                                    <img src="img/temp/sections/6.svg" alt="">
-                                </div>
-                                <div class="section-links-block__name">Outdoor</div>
-                            </a>
+                            </div>
                         </div>
+                        <div class="section-links-block__title">Popular Categories</div>
                         <div class="section-links-block__row">
                             <div class="section-slider swiper-container js-section-slider">
                                 <div class="swiper-wrapper">
@@ -1202,8 +1221,18 @@
                 </div>
                 <div class="main-section-block">
                     <div class="main-section-block__left_block">
-                        <form class="main-filter">
-                            <div class="main-filter__element">
+                        <div class="main-filter-bg js-filter-bg js-mobile-filter"></div>
+                        <form class="main-filter js-filter-block">
+                            <div class="main-filter__header">
+                                <div class="main-filter__title">Filters</div>
+                                <div class="main-filter__close js-mobile-filter">
+                                    Close
+                                    <svg width="12" height="12">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="main-filter__element main-filter__element--nohover">
                                 <div class="main-filter__name">Price</div>
                                 <div class="main-filter__content active">
                                     <div class="filter-slider">
@@ -1227,7 +1256,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="main-filter__element">
+                            <div class="main-filter__element main-filter__element--nohover">
                                 <div class="main-filter__name">Height</div>
                                 <div class="main-filter__content active">
                                     <div class="filter-slider">
@@ -1388,853 +1417,938 @@
                                 </i>
                                 Clear filter
                             </div>
+                            <div class="main-filter__mobile_block">
+                                <div class="main-filter__text">Selected filters</div>
+                                <div class="main-filter__group">
+                                    <div class="tag">
+                                        <div class="tag__name">leight</div>
+                                        <div class="tag__del">
+                                            <svg width="8" height="8">
+                                                <use xlink:href="#close"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="tag">
+                                        <div class="tag__name">Size</div>
+                                        <div class="tag__del">
+                                            <svg width="8" height="8">
+                                                <use xlink:href="#close"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="tag">
+                                        <div class="tag__name">Colour</div>
+                                        <div class="tag__del">
+                                            <svg width="8" height="8">
+                                                <use xlink:href="#close"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-filter__clear">
+                                    <i>
+                                        <svg width="7" height="7">
+                                            <use xlink:href="#close"></use>
+                                        </svg>
+                                    </i>
+                                    Clear filter
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <div class="main-section-block__right_block">
-                        <div class="section-grid">
-                            <div class="section-grid__block">
-                                <div class="section-filter">
-                                    <div class="section-filter__row">
-                                        <div class="checkbox-2">
-                                            <span>Filters</span>
-                                            <input type="checkbox" id="filters">
-                                            <label for="filters"></label>
-                                        </div>
-                                        <div class="section-filter__group">
-                                            <div class="tag">
-                                                <div class="tag__name">leight</div>
-                                                <div class="tag__del">
-                                                    <svg width="8" height="8">
-                                                        <use xlink:href="#close"></use>
-                                                    </svg>
-                                                </div>
+                        <div class="main-section-block__items">
+                            <div class="section-grid">
+                                <div class="section-grid__block">
+                                    <div class="section-filter">
+                                        <div class="section-filter__row">
+                                            <div class="checkbox-2">
+                                                <span>Filters</span>
+                                                <input type="checkbox" id="filters">
+                                                <label for="filters"></label>
                                             </div>
-                                            <div class="tag">
-                                                <div class="tag__name">Size</div>
-                                                <div class="tag__del">
-                                                    <svg width="8" height="8">
-                                                        <use xlink:href="#close"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="tag">
-                                                <div class="tag__name">Colour</div>
-                                                <div class="tag__del">
-                                                    <svg width="8" height="8">
-                                                        <use xlink:href="#close"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="section-filter__row section-filter__row--spacebetween">
-                                        <div class="mini-filter js-filter">
-                                            <div class="mini-filter__header">
-                                                <div class="mini-filter__element js-element-filter">
-                                                    <div class="mini-filter__text">Size</div>
-                                                    <div class="mini-filter__toggle">
-                                                        <svg width="11" height="6">
-                                                            <use xlink:href="#arrow-down"></use>
+                                            <div class="section-filter__group">
+                                                <div class="tag">
+                                                    <div class="tag__name">leight</div>
+                                                    <div class="tag__del">
+                                                        <svg width="8" height="8">
+                                                            <use xlink:href="#close"></use>
                                                         </svg>
                                                     </div>
                                                 </div>
-                                                <div class="mini-filter__element js-element-filter">
-                                                    <div class="mini-filter__text">Shape</div>
-                                                    <div class="mini-filter__toggle">
-                                                        <svg width="11" height="6">
-                                                            <use xlink:href="#arrow-down"></use>
+                                                <div class="tag">
+                                                    <div class="tag__name">Size</div>
+                                                    <div class="tag__del">
+                                                        <svg width="8" height="8">
+                                                            <use xlink:href="#close"></use>
                                                         </svg>
                                                     </div>
                                                 </div>
-                                                <div class="mini-filter__element js-element-filter">
-                                                    <div class="mini-filter__text">Material</div>
-                                                    <div class="mini-filter__toggle">
-                                                        <svg width="11" height="6">
-                                                            <use xlink:href="#arrow-down"></use>
+                                                <div class="tag">
+                                                    <div class="tag__name">Colour</div>
+                                                    <div class="tag__del">
+                                                        <svg width="8" height="8">
+                                                            <use xlink:href="#close"></use>
                                                         </svg>
                                                     </div>
                                                 </div>
-                                                <div class="mini-filter__element js-element-filter">
-                                                    <div class="mini-filter__text">Colour</div>
-                                                    <div class="mini-filter__toggle">
-                                                        <svg width="11" height="6">
-                                                            <use xlink:href="#arrow-down"></use>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mini-filter__content">
-                                                <div class="mini-filter__block js-block-filter">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique corporis autem impedit expedita aut atque cum velit quisquam repellendus suscipit! Odit maxime, non eveniet nam quis repellat ducimus quaerat tempore impedit dolorum assumenda nobis tenetur minus corporis, aperiam, totam ut. Officia earum assumenda corporis possimus delectus sapiente molestiae aliquam officiis.</div>
-                                                <div class="mini-filter__block js-block-filter">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, quia?</div>
-                                                <div class="mini-filter__block js-block-filter">
-                                                    <ul class="mini-filter__container">
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Aluminium</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Clay</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Concrete GRC</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Conten-Steel</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Fiberconcrete</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Fiberglass</a></li>
-                                                    </ul>
-                                                    <ul class="mini-filter__container">
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Fiberstone</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">GRP 2K coating</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Galvanised Steel</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Glazed-clay</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Plastic</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Poly resin</a></li>
-                                                    </ul>
-                                                    <ul class="mini-filter__container">
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Polystone</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Premium-plastic</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Steel</a></li>
-                                                        <li class="mini-filter__list"><a class="mini-filter__link" href="">Wood</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="mini-filter__block js-block-filter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestias delectus repellendus optio modi consequuntur? Reiciendis, saepe vel? Similique, maxime!</div>
                                             </div>
                                         </div>
-                                        <div class="section-filter__group">
-                                            <div class="mini-filter mini-filter--show js-filter">
+                                        <div class="section-filter__row section-filter__row--spacebetween">
+                                            <div class="mini-filter mini-filter--hide js-filter">
                                                 <div class="mini-filter__header">
-                                                    <div class="mini-filter__element js-show-filter">
-                                                        <div class="mini-filter__text">12</div>
+                                                    <div class="mini-filter__element js-element-filter">
+                                                        <div class="mini-filter__text">Size</div>
                                                         <div class="mini-filter__toggle">
                                                             <svg width="11" height="6">
                                                                 <use xlink:href="#arrow-down"></use>
                                                             </svg>
                                                         </div>
-                                                        <div class="mini-filter__name">show</div>
                                                     </div>
-                                                </div>
-                                                <div class="mini-filter__content">
-                                                    <div class="mini-filter__block js-show-block-filter">
-                                                        <ul class="mini-filter__container">
-                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">12</a></li>
-                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">24</a></li>
-                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">32</a></li>
-                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">64</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mini-filter mini-filter--sort js-filter">
-                                                <div class="mini-filter__header">
-                                                    <div class="mini-filter__element js-sort-filter">
-                                                        <div class="mini-filter__text">Popularity</div>
+                                                    <div class="mini-filter__element js-element-filter">
+                                                        <div class="mini-filter__text">Shape</div>
                                                         <div class="mini-filter__toggle">
                                                             <svg width="11" height="6">
                                                                 <use xlink:href="#arrow-down"></use>
                                                             </svg>
                                                         </div>
-                                                        <div class="mini-filter__name">sort by</div>
+                                                    </div>
+                                                    <div class="mini-filter__element js-element-filter">
+                                                        <div class="mini-filter__text">Material</div>
+                                                        <div class="mini-filter__toggle">
+                                                            <svg width="11" height="6">
+                                                                <use xlink:href="#arrow-down"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mini-filter__element js-element-filter">
+                                                        <div class="mini-filter__text">Colour</div>
+                                                        <div class="mini-filter__toggle">
+                                                            <svg width="11" height="6">
+                                                                <use xlink:href="#arrow-down"></use>
+                                                            </svg>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="mini-filter__content">
-                                                    <div class="mini-filter__block js-sort-block-filter">
+                                                    <div class="mini-filter__block js-block-filter">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique corporis autem impedit expedita aut atque cum velit quisquam repellendus suscipit! Odit maxime, non eveniet nam quis repellat ducimus quaerat tempore impedit dolorum assumenda nobis tenetur minus corporis, aperiam, totam ut. Officia earum assumenda corporis possimus delectus sapiente molestiae aliquam officiis.</div>
+                                                    <div class="mini-filter__block js-block-filter">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, quia?</div>
+                                                    <div class="mini-filter__block js-block-filter">
                                                         <ul class="mini-filter__container">
-                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Price</a></li>
-                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Popularity</a></li>
-                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Rating</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Aluminium</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Clay</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Concrete GRC</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Conten-Steel</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Fiberconcrete</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Fiberglass</a></li>
                                                         </ul>
+                                                        <ul class="mini-filter__container">
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Fiberstone</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">GRP 2K coating</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Galvanised Steel</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Glazed-clay</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Plastic</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Poly resin</a></li>
+                                                        </ul>
+                                                        <ul class="mini-filter__container">
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Polystone</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Premium-plastic</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Steel</a></li>
+                                                            <li class="mini-filter__list"><a class="mini-filter__link" href="">Wood</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mini-filter__block js-block-filter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestias delectus repellendus optio modi consequuntur? Reiciendis, saepe vel? Similique, maxime!</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-filter__group">
+                                                <div class="mini-filter mini-filter--show mini-filter--hide_mobile js-filter">
+                                                    <div class="mini-filter__header">
+                                                        <div class="mini-filter__element js-show-filter">
+                                                            <div class="mini-filter__text">12</div>
+                                                            <div class="mini-filter__toggle">
+                                                                <svg width="11" height="6">
+                                                                    <use xlink:href="#arrow-down"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="mini-filter__name">show</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mini-filter__content">
+                                                        <div class="mini-filter__block js-show-block-filter">
+                                                            <ul class="mini-filter__container">
+                                                                <li class="mini-filter__list"><a class="mini-filter__link" href="">12</a></li>
+                                                                <li class="mini-filter__list"><a class="mini-filter__link" href="">24</a></li>
+                                                                <li class="mini-filter__list"><a class="mini-filter__link" href="">32</a></li>
+                                                                <li class="mini-filter__list"><a class="mini-filter__link" href="">64</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mini-filter mini-filter--show mini-filter--view_mobile js-mobile-view">
+                                                    <div class="mini-filter__header">
+                                                        <div class="mini-filter__element">
+                                                            <div class="mini-filter__text">12</div>
+                                                            <div class="mini-filter__toggle">
+                                                                <svg width="11" height="6">
+                                                                    <use xlink:href="#arrow-down"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="mini-filter__name">show</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-filter__mobile_group">
+                                                    <div class="mini-filter-button js-mobile-filter">
+                                                        <svg width="20" height="20">
+                                                            <use xlink:href="#filter"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="mini-sort-button js-mobile-sort">
+                                                        <svg width="20" height="16">
+                                                            <use xlink:href="#sort"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="mini-filter mini-filter--sort js-filter">
+                                                        <div class="mini-filter__header">
+                                                            <div class="mini-filter__element js-sort-filter">
+                                                                <div class="mini-filter__text">Popularity</div>
+                                                                <div class="mini-filter__toggle">
+                                                                    <svg width="11" height="6">
+                                                                        <use xlink:href="#arrow-down"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="mini-filter__name">sort by</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mini-filter__content">
+                                                            <div class="mini-filter__block js-sort-block-filter">
+                                                                <ul class="mini-filter__container">
+                                                                    <li class="mini-filter__list"><a class="mini-filter__link" href="">Price</a></li>
+                                                                    <li class="mini-filter__list"><a class="mini-filter__link" href="">Popularity</a></li>
+                                                                    <li class="mini-filter__list"><a class="mini-filter__link" href="">Rating</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="section-filter__mobile_content">
+                                            <div class="mobile-sort js-mobile-sort-content">
+                                                <a class="mobile-sort__item" href="">Price</a>
+                                                <a class="mobile-sort__item active" href="">Popularity</a>
+                                                <a class="mobile-sort__item" href="">Actuality</a>
+                                            </div>
+                                            <div class="mobile-sort js-mobile-view-content">
+                                                <a class="mobile-sort__item active" href="">12</a>
+                                                <a class="mobile-sort__item" href="">24</a>
+                                                <a class="mobile-sort__item" href="">32</a>
+                                                <a class="mobile-sort__item" href="">64</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="section-grid__block section-grid__block--margin">
-                                <h1 class="section-grid__title">Big flower pots</h1>
-                                <div class="section-grid__count">214</div>
-                            </div>
-                            <div class="section-grid__row">
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
-                                            <div class="product-block__stickers">
-                                                <img src="img/stiker-delivery.svg" alt="">
-                                                <img src="img/stiker-sale.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value">£22.49</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
-                                    </div>
+                                <div class="section-grid__block section-grid__block--margin">
+                                    <h1 class="section-grid__title">Big flower pots</h1>
+                                    <div class="section-grid__count">214</div>
                                 </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                <div class="section-grid__row">
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
+                                                <div class="product-block__stickers">
+                                                    <img src="img/stiker-delivery.svg" alt="">
+                                                    <img src="img/stiker-sale.svg" alt="">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value">£22.49</div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block product-block--missing">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--missing">out of stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">notify me</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block product-block--missing">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                            <div class="product-block__status product-block__status--missing">out of stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">notify me</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value">£22.49</div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="" data-img="img/temp/pic-prod-2.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod-2.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value">£22.49</div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="" data-img="img/temp/pic-prod-2.png">
+                                                <div class="product-block__stickers">
+                                                </div>
+                                            </div>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod-2.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
+                                        </div>
+                                    </div> 
                                 </div> 
-                            </div> 
-                        </div>
-                        <div class="choise-items-slider">
-                            <div class="choise-items-slider__row">
-                                <div class="choise-items-slider__title">Top choise<svg width="45" height="42"><use xlink:href="#top-choise"></use></svg>
-                                </div>
-                                <a class="btn choise-items-slider__button" href="">Show all</a>
                             </div>
-                            <div class="choise-items-slider__container">
-                                <div class="swiper-container js-top-choise-slider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide product-block">
-                                            <div class="product-block__image">
-                                                <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
-                                                <div class="product-block__stickers">
-                                                    <img src="img/stiker-delivery.svg" alt="">
-                                                    <img src="img/stiker-sale.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="product-block__status product-block__status--available">in stock</div>
-                                            <div class="product-block__price">
-                                                <div class="item-price">
-                                                    <div class="item-price__text">from</div>
-                                                    <div class="item-price__content">
-                                                        <div class="item-price__value">£22.49</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                            <div class="product-block__offers">
-                                                <div class="item-offers">
-                                                    <div class="item-offers__text">choose colour</div>
-                                                    <div class="item-offers__content">
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a class="btn product-block__button" href="">See more options</a>
-                                        </div>
-                                        <div class="swiper-slide product-block">
-                                            <div class="product-block__image">
-                                                <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
-                                                <div class="product-block__stickers">
-                                                    <img src="img/stiker-delivery.svg" alt="">
-                                                    <img src="img/stiker-sale.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="product-block__status product-block__status--available">in stock</div>
-                                            <div class="product-block__price">
-                                                <div class="item-price">
-                                                    <div class="item-price__text">from</div>
-                                                    <div class="item-price__content">
-                                                        <div class="item-price__value">£22.49</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                            <div class="product-block__offers">
-                                                <div class="item-offers">
-                                                    <div class="item-offers__text">choose colour</div>
-                                                    <div class="item-offers__content">
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a class="btn product-block__button" href="">See more options</a>
-                                        </div>
-                                        <div class="swiper-slide product-block">
-                                            <div class="product-block__image">
-                                                <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
-                                                <div class="product-block__stickers">
-                                                    <img src="img/stiker-delivery.svg" alt="">
-                                                    <img src="img/stiker-sale.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="product-block__status product-block__status--available">in stock</div>
-                                            <div class="product-block__price">
-                                                <div class="item-price">
-                                                    <div class="item-price__text">from</div>
-                                                    <div class="item-price__content">
-                                                        <div class="item-price__value">£22.49</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                            <div class="product-block__offers">
-                                                <div class="item-offers">
-                                                    <div class="item-offers__text">choose colour</div>
-                                                    <div class="item-offers__content">
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
-                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a class="btn product-block__button" href="">See more options</a>
-                                        </div>
+                            <div class="choise-items-slider">
+                                <div class="choise-items-slider__row">
+                                    <div class="choise-items-slider__title">Top choise<svg width="45" height="42"><use xlink:href="#top-choise"></use></svg>
                                     </div>
-                                </div>
-                                <div class="choise-items-slider__navigation">
-                                    <div class="swiper-button-prev choise-items-slider__prev"></div>
                                     <a class="btn choise-items-slider__button" href="">Show all</a>
-                                    <div class="swiper-button-next choise-items-slider__next"></div>
+                                </div>
+                                <div class="choise-items-slider__container">
+                                    <div class="swiper-container js-top-choise-slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide product-block">
+                                                <div class="product-block__image">
+                                                    <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
+                                                    <div class="product-block__stickers">
+                                                        <img src="img/stiker-delivery.svg" alt="">
+                                                        <img src="img/stiker-sale.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="product-block__status product-block__status--available">in stock</div>
+                                                <div class="product-block__price">
+                                                    <div class="item-price">
+                                                        <div class="item-price__text">from</div>
+                                                        <div class="item-price__content">
+                                                            <div class="item-price__value">£22.49</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                                <div class="product-block__offers">
+                                                    <div class="item-offers">
+                                                        <div class="item-offers__text">choose colour</div>
+                                                        <div class="item-offers__content">
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="btn product-block__button" href="">See more options</a>
+                                            </div>
+                                            <div class="swiper-slide product-block">
+                                                <div class="product-block__image">
+                                                    <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
+                                                    <div class="product-block__stickers">
+                                                        <img src="img/stiker-delivery.svg" alt="">
+                                                        <img src="img/stiker-sale.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="product-block__status product-block__status--available">in stock</div>
+                                                <div class="product-block__price">
+                                                    <div class="item-price">
+                                                        <div class="item-price__text">from</div>
+                                                        <div class="item-price__content">
+                                                            <div class="item-price__value">£22.49</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                                <div class="product-block__offers">
+                                                    <div class="item-offers">
+                                                        <div class="item-offers__text">choose colour</div>
+                                                        <div class="item-offers__content">
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="btn product-block__button" href="">See more options</a>
+                                            </div>
+                                            <div class="swiper-slide product-block">
+                                                <div class="product-block__image">
+                                                    <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
+                                                    <div class="product-block__stickers">
+                                                        <img src="img/stiker-delivery.svg" alt="">
+                                                        <img src="img/stiker-sale.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="product-block__status product-block__status--available">in stock</div>
+                                                <div class="product-block__price">
+                                                    <div class="item-price">
+                                                        <div class="item-price__text">from</div>
+                                                        <div class="item-price__content">
+                                                            <div class="item-price__value">£22.49</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                                <div class="product-block__offers">
+                                                    <div class="item-offers">
+                                                        <div class="item-offers__text">choose colour</div>
+                                                        <div class="item-offers__content">
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
+                                                            <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="btn product-block__button" href="">See more options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="choise-items-slider__navigation">
+                                        <div class="swiper-button-prev choise-items-slider__prev slider-prev">
+                                            <svg width="9" height="17">
+                                                <use xlink:href="#arrow"></use>
+                                            </svg>
+                                        </div>
+                                        <a class="btn choise-items-slider__button" href="">Show all</a>
+                                        <div class="swiper-button-next choise-items-slider__next slider-next">
+                                            <svg width="9" height="17">
+                                                <use xlink:href="#arrow"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="section-grid">
-                            <div class="section-grid__row">
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
-                                            <div class="product-block__stickers">
-                                                <img src="img/stiker-delivery.svg" alt="">
-                                                <img src="img/stiker-sale.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value">£22.49</div>
+                            <div class="section-grid">
+                                <div class="section-grid__row">
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
+                                                <div class="product-block__stickers">
+                                                    <img src="img/stiker-delivery.svg" alt="">
+                                                    <img src="img/stiker-sale.svg" alt="">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value">£22.49</div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block product-block--missing">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--missing">out of stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block product-block--missing">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
+                                            <div class="product-block__status product-block__status--missing">out of stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">notify me</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">notify me</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value">£22.49</div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value">£22.49</div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="" data-img="img/temp/pic-prod-2.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="" data-img="img/temp/pic-prod-2.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod-2.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod-2.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col section-grid__col--full">
-                                    <div class="big-offer-2">
-                                        <div class="big-offer-2__image">
-                                            <img src="img/temp/pic-offer.png" alt="">
+                                    <div class="section-grid__col section-grid__col--full">
+                                        <div class="big-offer-2">
+                                            <div class="big-offer-2__image">
+                                                <img src="img/temp/pic-offer.png" alt="">
+                                            </div>
+                                            <div class="big-offer-2__title">Easy to choose and buy</div>
+                                            <div class="big-offer-2__desc">For decorating your home and garden</div>
+                                            <a class="btn big-offer-2__button">Start shopping</a>
                                         </div>
-                                        <div class="big-offer-2__title">Easy to choose and buy</div>
-                                        <div class="big-offer-2__desc">For decorating your home and garden</div>
-                                        <a class="btn big-offer-2__button">Start shopping</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
-                                            <div class="product-block__stickers">
-                                                <img src="img/stiker-delivery.svg" alt="">
-                                                <img src="img/stiker-sale.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value">£22.49</div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
+                                                <div class="product-block__stickers">
+                                                    <img src="img/stiker-delivery.svg" alt="">
+                                                    <img src="img/stiker-sale.svg" alt="">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value">£22.49</div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block product-block--missing">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--missing">out of stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block product-block--missing">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod-2.png" alt="">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
-                                                    <a class="item-offers__element" href=""></a>
+                                            <div class="product-block__status product-block__status--missing">out of stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                        <a class="item-offers__element" href=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">notify me</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">notify me</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value item-price__value--new">£37.99</div>
-                                                    <div class="item-price__old_value"><s>£39.99</s></div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-prod.png" alt="" data-img="img/temp/pic-prod.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value item-price__value--new">£37.99</div>
+                                                        <div class="item-price__old_value"><s>£39.99</s></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #EEE2D5;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #D5E7BD;" data-img="img/temp/pic-prod.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-prod.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="product-block">
-                                        <div class="product-block__image">
-                                            <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
-                                            <div class="product-block__stickers">
-                                            </div>
-                                        </div>
-                                        <div class="product-block__status product-block__status--available">in stock</div>
-                                        <div class="product-block__price">
-                                            <div class="item-price">
-                                                <div class="item-price__text">from</div>
-                                                <div class="item-price__content">
-                                                    <div class="item-price__value">£22.49</div>
+                                    <div class="section-grid__col">
+                                        <div class="product-block">
+                                            <div class="product-block__image">
+                                                <img class="js-item-pic" src="img/temp/pic-1.png" alt="" data-img="img/temp/pic-1.png">
+                                                <div class="product-block__stickers">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-block__desc">Lorem ipsum dolor.</div>
-                                        <div class="product-block__offers">
-                                            <div class="item-offers">
-                                                <div class="item-offers__text">choose colour</div>
-                                                <div class="item-offers__content">
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
-                                                    <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                            <div class="product-block__status product-block__status--available">in stock</div>
+                                            <div class="product-block__price">
+                                                <div class="item-price">
+                                                    <div class="item-price__text">from</div>
+                                                    <div class="item-price__content">
+                                                        <div class="item-price__value">£22.49</div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="product-block__desc">Lorem ipsum dolor.</div>
+                                            <div class="product-block__offers">
+                                                <div class="item-offers">
+                                                    <div class="item-offers__text">choose colour</div>
+                                                    <div class="item-offers__content">
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #F48022;" data-img="img/temp/pic-1-1.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #C3C77F;" data-img="img/temp/pic-1-2.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #FFD1B6;" data-img="img/temp/pic-1-3.png"></a>
+                                                        <a class="item-offers__element js-choose-colour" href="" style="background: #CCE7ED;" data-img="img/temp/pic-1-4.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn product-block__button" href="">See more options</a>
                                         </div>
-                                        <a class="btn product-block__button" href="">See more options</a>
                                     </div>
-                                </div>
-                                <div class="section-grid__col">
-                                    <div class="offer-block">
-                                        <div class="offer-block__image">
-                                            <img src="img/temp/pic-offer-1.png" alt="">
+                                    <div class="section-grid__col">
+                                        <div class="offer-block">
+                                            <div class="offer-block__image">
+                                                <img src="img/temp/pic-offer-1.png" alt="">
+                                            </div>
+                                            <div class="offer-block__text">Planter trends in 2021</div>
+                                            <a class="offer-block__link" href="">Read more</a>
                                         </div>
-                                        <div class="offer-block__text">Planter trends in 2021</div>
-                                        <a class="offer-block__link" href="">Read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -2279,99 +2393,101 @@
                     <div class="between-content__wrapper">
                         <div class="between-content__title">Recently viewed</div>
                         <div class="viewed-slider">
-                            <div class="swiper-button-prev viewed-slider__prev slider-prev">
+                            <div class="swiper-button-prev slider-prev viewed-slider__prev">
                                 <svg width="9" height="17">
                                     <use xlink:href="#arrow"></use>
                                 </svg>
                             </div>
-                            <div class="swiper-container js-viewed-slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide item-block">
-                                        <div class="item-block__image">
-                                            <img src="img/temp/pic-item-1.png" alt="">
-                                        </div>
-                                        <a class="item-block__name" href="">Window Box Light Con-
-                                                crete Black Terazzo Planter by IDEALIST Lite L40 W17 H17.5 cm</a>
-                                        <div class="item-block__footer">
-                                            <div class="item-block__price">£ 24.99</div>
-                                            <div class="item-block__button">
-                                                <svg width="20" height="17">
-                                                    <use xlink:href="#basket-btn"></use>
-                                                </svg>
+                            <div class="viewed-slider__container">
+                                <div class="swiper-container js-viewed-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide item-block">
+                                            <div class="item-block__image">
+                                                <img src="img/temp/pic-item-1.png" alt="">
+                                            </div>
+                                            <a class="item-block__name" href="">Window Box Light Con-
+                                                    crete Black Terazzo Planter by IDEALIST Lite L40 W17 H17.5 cm</a>
+                                            <div class="item-block__footer">
+                                                <div class="item-block__price">£ 24.99</div>
+                                                <div class="item-block__button">
+                                                    <svg width="20" height="17">
+                                                        <use xlink:href="#basket-btn"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide item-block">
-                                        <div class="item-block__image">
-                                            <img src="img/temp/pic-item-2.png" alt="">
-                                        </div>
-                                        <a class="item-block__name" href="">Tall Tapered Contem-
-                                            porary Faux Lead Light Concrete Planter by IDEALIST Lite H50.5...</a>
-                                        <div class="item-block__footer">
-                                            <div class="item-block__sale_price">
-                                                <s>£ 27.99</s>
-                                                <span>£ 24.99</span>
+                                        <div class="swiper-slide item-block">
+                                            <div class="item-block__image">
+                                                <img src="img/temp/pic-item-2.png" alt="">
                                             </div>
-                                            <div class="item-block__button">
-                                                <svg width="20" height="17">
-                                                    <use xlink:href="#basket-btn"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide item-block">
-                                        <div class="item-block__image">
-                                            <img src="img/temp/pic-item-3.png" alt="">
-                                        </div>
-                                        <a class="item-block__name" href="">Ribbed Black Light</a>
-                                        <div class="item-block__footer">
-                                            <div class="item-block__price">£ 24.99</div>
-                                            <div class="item-block__button item-block__button--buy">
-                                                <svg width="15" height="11">
-                                                    <use xlink:href="#check-btn"></use>
-                                                </svg>
+                                            <a class="item-block__name" href="">Tall Tapered Contem-
+                                                porary Faux Lead Light Concrete Planter by IDEALIST Lite H50.5...</a>
+                                            <div class="item-block__footer">
+                                                <div class="item-block__sale_price">
+                                                    <s>£ 27.99</s>
+                                                    <span>£ 24.99</span>
+                                                </div>
+                                                <div class="item-block__button">
+                                                    <svg width="20" height="17">
+                                                        <use xlink:href="#basket-btn"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide item-block">
-                                        <div class="item-block__image">
-                                            <img src="img/temp/pic-item-2.png" alt="">
-                                        </div>
-                                        <a class="item-block__name" href="">Tall Tapered Contem-
-                                            porary Faux Lead Light Concrete Planter by IDEALIST Lite H50.5...</a>
-                                        <div class="item-block__footer">
-                                            <div class="item-block__sale_price">
-                                                <s>£ 27.99</s>
-                                                <span>£ 24.99</span>
+                                        <div class="swiper-slide item-block">
+                                            <div class="item-block__image">
+                                                <img src="img/temp/pic-item-3.png" alt="">
                                             </div>
-                                            <div class="item-block__button">
-                                                <svg width="20" height="17">
-                                                    <use xlink:href="#basket-btn"></use>
-                                                </svg>
+                                            <a class="item-block__name" href="">Ribbed Black Light</a>
+                                            <div class="item-block__footer">
+                                                <div class="item-block__price">£ 24.99</div>
+                                                <div class="item-block__button item-block__button--buy">
+                                                    <svg width="15" height="11">
+                                                        <use xlink:href="#check-btn"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide item-block">
-                                        <div class="item-block__image">
-                                            <img src="img/temp/pic-item-2.png" alt="">
-                                        </div>
-                                        <a class="item-block__name" href="">Ribbed Black Light Concrete Bowl Planter by</a>
-                                        <div class="item-block__footer">
-                                            <div class="item-block__sale_price">
-                                                <s>£ 27.99</s>
-                                                <span>£ 24.99</span>
+                                        <div class="swiper-slide item-block">
+                                            <div class="item-block__image">
+                                                <img src="img/temp/pic-item-2.png" alt="">
                                             </div>
-                                            <div class="item-block__button">
-                                                <svg width="20" height="17">
-                                                    <use xlink:href="#basket-btn"></use>
-                                                </svg>
+                                            <a class="item-block__name" href="">Tall Tapered Contem-
+                                                porary Faux Lead Light Concrete Planter by IDEALIST Lite H50.5...</a>
+                                            <div class="item-block__footer">
+                                                <div class="item-block__sale_price">
+                                                    <s>£ 27.99</s>
+                                                    <span>£ 24.99</span>
+                                                </div>
+                                                <div class="item-block__button">
+                                                    <svg width="20" height="17">
+                                                        <use xlink:href="#basket-btn"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide item-block">
+                                            <div class="item-block__image">
+                                                <img src="img/temp/pic-item-2.png" alt="">
+                                            </div>
+                                            <a class="item-block__name" href="">Ribbed Black Light Concrete Bowl Planter by</a>
+                                            <div class="item-block__footer">
+                                                <div class="item-block__sale_price">
+                                                    <s>£ 27.99</s>
+                                                    <span>£ 24.99</span>
+                                                </div>
+                                                <div class="item-block__button">
+                                                    <svg width="20" height="17">
+                                                        <use xlink:href="#basket-btn"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <a class="viewed-slider__link_btn" href="">view all brands</a>
-                            <div class="swiper-button-next viewed-slider__next slider-next">
+                            <div class="swiper-button-next slider-next viewed-slider__next">
                                 <svg width="9" height="17">
                                     <use xlink:href="#arrow"></use>
                                 </svg>
@@ -2382,6 +2498,18 @@
             </div>
             <div class="bottom-content">
                 <div class="bottom-content__wrapper">
+                    <div class="bottom-content__title">Flower clay pots for plants</div>
+                    <div class="bottom-content__desc">Clay is one of the most popular materials for creating flower pots. In our online store, you can find stunning designs, and different shapes and sizes of clay containers for plants, flowers and decorative trees. If you decide to design a beautiful outdoor area, then choose large flower boxes, though you can also choose room types of 2 or 6 inch diameters. In our catalog, there are also inexpensive terracotta items, Italian pottery planters, beautiful polystone models and other flower containers from Bangalore. Clay has some of the highest quality, and here you can buy such goods for your garden or wholesale. We offer only the trendiest pots for sale which you can purchase at inexpensive prices.</div>
+                </div>
+                <div class="tags">
+                    <a class="tags__link" href="">Jumbo</a>
+                    <a class="tags__link" href="">Large</a>
+                    <a class="tags__link" href="">Outdoor</a>
+                    <a class="tags__link" href="">Floor</a>
+                    <a class="tags__link" href="">Jumbo</a>
+                    <a class="tags__link" href="">Large</a>
+                    <a class="tags__link" href="">Outdoor</a>
+                    <a class="tags__link" href="">Floor</a>
                 </div>
             </div>
         </div>
@@ -2606,6 +2734,18 @@
         </symbol>
         <symbol id="top-choise" viewBox="0 0 45 42">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M37.1193 25.2052L44.6967 28.2652L34.6427 41.7232L29.5348 41.7833C32.0913 38.1858 31.8847 32.8472 30.1505 28.9895L22.9736 32.2248L21.4292 23.0276C13.9526 25.4895 11.9747 36.0673 15.9224 41.9429L11.0704 42C-11.5676 28.6748 5.25725 3.28229 19.5088 2.26851L18.5944 10.6738L37.2761 0L33.2312 14.0773L45 14.7526L37.1193 25.2052Z" fill="#3F8167"/>
+        </symbol>
+        <symbol id="filter" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.136719 15.446C0.136719 14.7681 0.686267 14.2185 1.36417 14.2185H8.27046C8.94837 14.2185 9.49792 14.7681 9.49792 15.446C9.49792 16.1239 8.94837 16.6734 8.27046 16.6734H1.36417C0.686267 16.6734 0.136719 16.1239 0.136719 15.446Z" fill="#404656"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0228 13.9243C15.1819 13.9243 14.5008 14.6049 14.5008 15.4463C14.5008 16.2869 15.1822 16.9683 16.0228 16.9683C16.8634 16.9683 17.5449 16.2869 17.5449 15.4463C17.5449 14.6049 16.8638 13.9243 16.0228 13.9243ZM12.0459 15.4463C12.0459 13.2484 13.8268 11.4694 16.0228 11.4694C18.2189 11.4694 19.9998 13.2484 19.9998 15.4463C19.9998 17.6427 18.2193 19.4232 16.0228 19.4232C13.8264 19.4232 12.0459 17.6427 12.0459 15.4463Z" fill="#404656"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6367 4.25309C10.6367 3.57518 11.1863 3.02563 11.8642 3.02563H18.7716C19.4495 3.02563 19.999 3.57518 19.999 4.25309C19.999 4.93099 19.4495 5.48054 18.7716 5.48054H11.8642C11.1863 5.48054 10.6367 4.93099 10.6367 4.25309Z" fill="#404656"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.136719 4.25294C0.136719 2.05653 1.91725 0.276001 4.11366 0.276001C6.31007 0.276001 8.0906 2.05653 8.0906 4.25294C8.0906 6.4508 6.30974 8.22988 4.11366 8.22988C1.91757 8.22988 0.136719 6.4508 0.136719 4.25294ZM4.11366 2.7309C3.27305 2.7309 2.59162 3.41233 2.59162 4.25294C2.59162 5.09435 3.27273 5.77498 4.11366 5.77498C4.95459 5.77498 5.6357 5.09435 5.6357 4.25294C5.6357 3.41233 4.95427 2.7309 4.11366 2.7309Z" fill="#404656"/>
+        </symbol>
+        <symbol id="sort" viewBox="0 0 20 16">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8068 1.94426C15.4944 1.94426 16.0518 2.44403 16.0518 3.06054V14.8837C16.0518 15.5002 15.4944 16 14.8068 16C14.1192 16 13.5618 15.5002 13.5618 14.8837V3.06054C13.5618 2.44403 14.1192 1.94426 14.8068 1.94426Z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.97958 10.5368C10.4669 10.1019 11.2552 10.1035 11.7402 10.5405L14.8065 13.3025L17.8727 10.5405C18.3577 10.1035 19.146 10.1019 19.6333 10.5368C20.1206 10.9718 20.1225 11.6785 19.6374 12.1155L15.6888 15.6723C15.4552 15.8827 15.138 16 14.8068 16C14.4756 16 14.1577 15.8827 13.9241 15.6723L9.97552 12.1155C9.49045 11.6785 9.49227 10.9718 9.97958 10.5368Z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.19388 0C5.88147 0 6.43886 0.499775 6.43886 1.11628V12.9395C6.43886 13.556 5.88147 14.0557 5.19388 14.0557C4.5063 14.0557 3.94891 13.556 3.94891 12.9395V1.11628C3.94891 0.499775 4.5063 0 5.19388 0Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.19388 0C5.52507 0 5.84227 0.118317 6.07591 0.328777L10.0245 3.88557C10.5096 4.32251 10.5077 5.0293 10.0204 5.46422C9.5331 5.89915 8.74483 5.89752 8.25976 5.46058L5.19355 2.6986L2.12734 5.46058C1.64227 5.89752 0.853997 5.89915 0.366682 5.46422C-0.120634 5.0293 -0.122455 4.32251 0.362613 3.88557L4.31119 0.328777C4.54483 0.118317 4.8627 0 5.19388 0Z"/>
         </symbol>
     </svg>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

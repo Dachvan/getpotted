@@ -12,6 +12,11 @@
         border-radius: 12px;
         text-decoration: none;
         transition: 0.2s ease-in-out;
+        @media screen and(max-width: 1024px){
+            min-width: 50px;
+            max-width: 50px;
+            height: 50px;
+        }
         svg{
             transition: 0.2s ease-in-out;
             fill: #3F8167;
@@ -38,6 +43,9 @@
         border-radius: 12px;
         display: flex;
         align-items: center;
+        @media screen and(max-width: 1024px){
+            height: 50px;
+        }
     }
     &__link{
         text-decoration: none;
@@ -66,9 +74,22 @@
                 color: #ffffff;
             }
         }
+        @media screen and(max-width: 1024px){
+            min-width: 40px;
+            max-width: 40px;
+            height: 40px;
+        }
     }
     &__group{
         display: flex;
         align-items: center;
+        @media screen and(max-width: 1024px){
+            .page-navigation__link{
+                &:first-child,
+                &:last-child{
+                    display: none;
+                }
+            }
+        }
     }
 }

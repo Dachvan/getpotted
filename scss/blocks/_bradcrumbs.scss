@@ -1,6 +1,8 @@
 .breadcrumbs {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 9;
     &__link {
         font-size: 14px;
         line-height: 14px;
@@ -18,11 +20,19 @@
         }
         &.active{
             color: #404656;
+            &:hover{
+                color: #404656;
+                text-decoration: none;
+            }
         }
         &:last-child{
             &::after{
                 display: none;
             }
+        }
+        &:hover{
+            color: #3F8167;
+            text-decoration: underline;
         }
     }
 }

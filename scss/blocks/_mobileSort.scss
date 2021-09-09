@@ -1,0 +1,41 @@
+.mobile-sort{
+    margin-bottom: 40px;
+    width: 100%;
+    background: #E2EAE8;
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: none;
+    flex-direction: column;
+    &.active{
+        display: flex;
+    }
+    &__item{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        color: #777E90;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        &::before{
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            margin-right: 20px;
+        }
+        &:last-child{
+            margin-bottom: 0px;
+        }
+        &.active{
+            color: #404656;
+            &::before{
+                background: #3F8167 url('/img/check-white.svg') no-repeat;
+                background-position: center;
+                background-size: 13px;
+            }
+        }
+    }
+}

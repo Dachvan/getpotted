@@ -44,11 +44,14 @@
         color: #404656;
     }
     &__line{
-        margin-top: 26px;
+        margin: 26px auto 0px;
         height: 2px;
         border: 0px;
         background: #C9CEDA;
         box-shadow: none;
+        @media screen and(max-width: 1275px){
+            width: calc(100% - 26px);
+        }
         .noUi-connect{
             background: #3F8167;
         }
@@ -64,6 +67,7 @@
             top: 0;
             bottom: 0;
             margin: auto;
+            right: -13px;
             &:before,
             &:after{
                 display: none;

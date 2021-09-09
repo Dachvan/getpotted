@@ -49,11 +49,11 @@ $(document).ready(function() {
     }).mouseleave(function() {
         $(this).parents('.product-block').find('.js-item-pic').attr('src', $(this).parents('.product-block').find('.js-item-pic').data('img'));
     });
-
     $('.js-mobile-menu').on('click', function() {
         $(this).toggleClass('active');
         $(this).find('.js-menu-toggle').toggle();
     });
+
     $('.js-menu-button').on('click', function() {
         $('body').toggleClass('overflow');
         $('.mobile-menu').toggleClass('active');
@@ -62,6 +62,30 @@ $(document).ready(function() {
         $('body').toggleClass('overflow');
         $('.mobile-search').toggleClass('active');
     });
+
+    $('.js-mobile-sort').on('click', function(){
+        $('.js-mobile-view,.js-mobile-view-content').removeClass('active');
+        $(this).toggleClass('active');
+        $('.js-mobile-sort-content').toggleClass('active');
+    });
+    $('.js-mobile-view').on('click', function(){
+        $('.js-mobile-sort,.js-mobile-sort-content').removeClass('active');
+        $(this).toggleClass('active');
+        $('.js-mobile-view-content').toggleClass('active');
+    });
+
+    $('.js-popular-filter').on('click', function(){
+        $(this).toggleClass('active').next().toggleClass('active');
+    });
+    $('.js-mobile-filter').on('click', function(){
+        $('body').toggleClass('overflow');
+        setTimeout(function(){
+            $('header').toggleClass('hide');
+            $('.js-filter-bg').toggleClass('active');
+            $('.js-filter-block').toggleClass('active');
+        }, 200);
+    });
+
     $('.js-toggle-filter').on('click', function(){
         $(this).toggleClass('active').next().toggleClass('active');
     });
@@ -98,43 +122,32 @@ $(document).ready(function() {
         },
         breakpoints: {
             1025: {
-                slidesPerView: 8,
+                slidesPerView: 'auto',
                 spaceBetween: 30,
-            },
-            569: {
-                slidesPerView: 4,
-                slidesPerColumn: 2,
-                spaceBetween: 20,
             },
             320: {
                 slidesPerView: 'auto',
-                spaceBetween: 10,
+                spaceBetween: 15,
             }
         }
     });
 
     const swiperTopChoise = new Swiper('.js-top-choise-slider', {
         navigation: {
-            nextEl: '.main-slider-block__next',
-            prevEl: '.main-slider-block__prev',
+            nextEl: '.choise-items-slider__next',
+            prevEl: '.choise-items-slider__prev',
         },
         slidesPerView: 3,
-        spaceBetween: 10,
-        /*breakpoints: {
-            1025: {
+        breakpoints: {
+            768: {
                 slidesPerView: 3,
-                spaceBetween: 10,
-            },
-            569: {
-                slidesPerView: 4,
-                slidesPerColumn: 2,
                 spaceBetween: 20,
             },
             320: {
-                slidesPerView: 'auto',
-                spaceBetween: 10,
+                slidesPerView: 2,
+                spaceBetween: 11,
             }
-        }*/
+        }
     });
 
     const swiperMain = new Swiper('.js-main-slider', {

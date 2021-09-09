@@ -222,6 +222,10 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    @media screen and(max-width: 1275px){
+        width: calc(100% + 200px);
+        margin: 0px -35px;
+    }
     &__image {
         position: absolute;
         z-index: 1;
