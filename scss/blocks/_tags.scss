@@ -1,7 +1,7 @@
-.tag{
+.tag {
     cursor: pointer;
     text-decoration: none;
-    background: #F4F5F6;
+    background: #f4f5f6;
     border-radius: 16px;
     padding: 5px;
     box-sizing: border-box;
@@ -10,25 +10,25 @@
     margin-right: 10px;
     margin-bottom: 10px;
     transition: 0.2s ease-in-out;
-    &:hover{
-        background: #C9CEDA;
-        .tag__del{
+    &:hover {
+        background: #c9ceda;
+        .tag__del {
             background: #404656;
-            svg{
+            svg {
                 fill: #ffffff;
             }
         }
     }
-    &:last-child{
+    &:last-child {
         margin-right: 0px;
     }
-    &__name{
+    &__name {
         padding-left: 15px;
         font-size: 14px;
         line-height: 14px;
         color: #404656;
     }
-    &__del{
+    &__del {
         margin-left: 10px;
         background: #ffffff;
         width: 22px;
@@ -38,31 +38,45 @@
         align-items: center;
         justify-content: center;
         transition: 0.2s ease-in-out;
-        svg{
+        svg {
             fill: #404656;
             transition: 0.2s ease-in-out;
         }
     }
 }
-.tags{
+.tags {
     margin: 60px auto 0px;
     max-width: 1070px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    &__link{
+    &__link {
         margin-right: 10px;
         margin-bottom: 10px;
-        background: #FFFFFF;
+        background: #ffffff;
         border-radius: 16px;
         padding: 9px 20px;
         box-sizing: border-box;
         font-size: 14px;
         line-height: 14px;
         color: #404656;
-        &:last-child{
+        &:last-child {
             margin-right: 0px;
+        }
+    }
+}
+.detail-tags{
+    width: 100%;
+    background: #E2EAE8;
+    border-radius: 36px;
+    padding: 40px 40px 30px;
+    &__wrapper{
+        max-width: 909px;
+        width: 100%;
+        margin: 0px auto;
+        .tags{
+            margin: 0px;
         }
     }
 }

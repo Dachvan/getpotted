@@ -1,13 +1,9 @@
 .main-section-block {
-    max-width: 1370px;
     width: 100%;
     margin: 0px auto;
-    padding: 0px 40px;
-    box-sizing: border-box;
     display: flex;
     @media screen and(max-width: 1275px){
         flex-wrap: wrap;
-        padding: 0px;
     }
     &__left_block {
         width: 300px;
@@ -47,6 +43,9 @@
     }
     @media screen and(max-width: 568px){
         padding: 15px 15px 0px 15px;
+    }
+    &--mt{
+        margin-top: 20px;
     }
     &__col {
         display: flex;

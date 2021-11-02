@@ -26,9 +26,11 @@
     display: flex;
     align-items: center;
     margin: 0px 18px 0px 0px;
+    @media screen and(max-width: 1275px) {
+        margin: 0px;
+    }
     &__list {
         list-style: none;
-        //margin-right: 18px;
         &:first-child {
             max-width: 150px;
             min-width: 150px;
@@ -37,6 +39,10 @@
             background: #3F8167;
             border-radius: 8px;
             transition: 0.2s ease-in-out;
+            @media screen and(max-width: 1275px) {
+                max-width: 100px;
+                min-width: 100px;
+            }
             &:hover {
                 background: #346F57;
             }
@@ -78,6 +84,9 @@
         &:nth-child(2) {
             .main-menu__link {
                 padding-left: 18px;
+                @media screen and(max-width: 1275px) {
+                    padding-left: 15px;
+                }
             }
         }
         &:hover {
@@ -115,6 +124,9 @@
         white-space: nowrap;
         letter-spacing: -0.02em;
         transition: 0.2s ease-in-out;
+        @media screen and(max-width: 1275px) {
+            padding: 15px;
+        }
         svg {
             transition: 0.2s ease-in-out;
             fill: #404656;
@@ -519,26 +531,5 @@
         display: none;
         width: 100%;
         margin-bottom: 48px;
-        ul {
-            margin: 0;
-            padding: 0;
-            li {
-                list-style: none;
-                margin-bottom: 15px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-                a {
-                    font-size: 24px;
-                    line-height: 24px;
-                    color: #404656;
-                    text-decoration-color: #3F8167;
-                    &:hover {
-                        text-decoration: none;
-                        color: #3F8167;
-                    }
-                }
-            }
-        }
     }
 }

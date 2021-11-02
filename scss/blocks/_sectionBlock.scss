@@ -1,15 +1,7 @@
 .top-section-block {
-    max-width: 1370px;
     width: 100%;
     margin: 20px auto 70px;
-    padding: 0px 40px;
     box-sizing: border-box;
-    @media screen and(max-width: 1275px){
-        padding: 0px 35px;
-    }
-    @media screen and(max-width: 568px){
-        padding: 0px 15px;
-    }
 }
 .section-name-block {
     width: 100%;

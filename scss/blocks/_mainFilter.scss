@@ -231,6 +231,79 @@
         flex-wrap: wrap;
     }
 }
+.filter-popup{
+    position: relative;
+    max-width: 340px;
+    width: 100%; 
+    border-radius: 16px;
+    padding: 30px 50px;
+    background: #ffffff;
+    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.15);
+    &::before{
+        content: '';
+        width: 18px;
+        height: 74px;
+        background: url('/img/element-popup.svg') no-repeat;
+        position: absolute;
+        left: -18px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0px;
+    }
+    &__close{
+        top: 15px;
+        right: 15px;
+        position: absolute;
+        margin-left: 10px;
+        background: #F4F5F6;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        svg{
+            fill: #404656;
+            transition: 0.2s ease-in-out;
+        }
+        &:hover{
+            background: #404656;
+            svg{
+                fill: #ffffff;
+            }
+        }
+   }
+   &__title{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #3F8167;
+   }
+   &__text{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 14px;
+        color: #404656;
+   }
+   &__button{
+       margin-top: 30px;
+        height: 60px;
+        background: #3F8167;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+        color: #FFFFFF;
+        &:hover{
+            background: #404656;
+        }
+   }
+}
 .main-filter-bg{
     position: fixed;
     top: 0;
@@ -432,6 +505,14 @@
             display: flex;
         }
     }
+    &__group{
+        display: flex;
+        flex-direction: column;
+        margin-right: 15px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
     &__container{
         margin-right: 10px;
         &:last-child{
@@ -522,7 +603,12 @@
         }
         &.active {
             background: #e2eae8;
-            .section-links-block__name {
+            .popular-filters__icon{
+                svg{
+                    fill: #3f8167;
+                }
+            }
+            .popular-filters__name{
                 color: #3f8167;
             }
         }
@@ -563,6 +649,9 @@
             width: 30px;
             height: 30px;
             margin-right: 5px;
+        }
+        svg{
+            fill: #404656;
         }
     }
 }

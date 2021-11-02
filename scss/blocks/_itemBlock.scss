@@ -80,7 +80,7 @@
         align-items: center;
         transition: 0.2s ease-in-out;
         &:hover {
-            background: #346E57;
+            background:#404656;
         }
         &--buy {
             background: #404656;
@@ -329,7 +329,6 @@
         font-size: 18px;
         line-height: 18px;
         color: #23262F;
-        margin-bottom: 10px;
         @media screen and(max-width: 1024px){
             font-size: 12px;
             line-height: 12px;
@@ -337,8 +336,10 @@
     }
     &__content{
         display: flex;
+        flex-wrap: wrap;
     }
     &__element{
+        margin-top: 10px;
         width: 25px;
         height: 25px;
         border-radius: 50%;

@@ -1,6 +1,5 @@
 .top-basket {
-    display: flex;
-    text-decoration: none;
+    position: relative;
     transition: 0.2s ease-in-out;
     &:hover {
         .top-basket__text {
@@ -12,6 +11,13 @@
                 fill: #3F8167;
             }
         }
+        .mini-basket{
+            display: block;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        text-decoration: none;
     }
     &__icon {
         position: relative;

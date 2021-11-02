@@ -30,7 +30,6 @@
         width: 100%;
         margin: 0px auto;
         padding: 0px 40px;
-        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         @media screen and(max-width: 1024px) {
@@ -49,7 +48,7 @@
         &:last-child {
             margin-bottom: 0px;
         }
-        @media screen and(max-width:1275px) {
+        @media screen and(max-width:1199px) {
             display: none;
         }
     }
@@ -57,7 +56,7 @@
         display: none;
         align-items: center;
         justify-content: space-between;
-        @media screen and(max-width: 1275px) {
+        @media screen and(max-width: 1199px) {
             display: flex;
         }
     }

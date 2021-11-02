@@ -1,19 +1,16 @@
 .main-slider {
-    &__wrapper {
-        max-width: 1370px;
-        width: 100%;
-        margin: 0px auto;
-        padding: 60px 40px 80px;
-        box-sizing: border-box;
-        @media screen and(max-width: 1275px) {
-            padding: 0px 34px 80px;
-        }
-        @media screen and(max-width: 1024px) {
-            padding: 0px 34px 60px;
-        }
-        @media screen and(max-width: 568px) {
-            padding: 0px 15px 60px;
-        }
+    width: 100%;
+    margin: 0px auto;
+    padding: 60px 40px 80px;
+    box-sizing: border-box;
+    @media screen and(max-width: 1275px) {
+        padding: 0px 34px 80px;
+    }
+    @media screen and(max-width: 1024px) {
+        padding: 0px 34px 60px;
+    }
+    @media screen and(max-width: 568px) {
+        padding: 0px 15px 60px;
     }
     &__content {
         background: #E2EAE8;

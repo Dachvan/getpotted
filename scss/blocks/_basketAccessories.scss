@@ -1,0 +1,27 @@
+.basket-accessories{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__slider{
+    margin: 55px 0px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__content{
+    width: 100%;
+  }
+  &__block{
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    transition: 0.4s ease-in-out;
+    &.hide {
+      transition: 0.4s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+    }
+  }
+}

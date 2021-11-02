@@ -114,3 +114,98 @@
         }
     }
 }
+.datail-info-block{
+    max-width: 880px;
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    &__wrapper{
+        flex: 1 1 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px -30px;
+    }
+    &__col{
+        flex: 1 0 50%;
+        padding: 0px 30px;
+        @media screen and(max-width: 767px) {
+            flex: 1 0 100%;
+            margin-bottom: 40px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: -0.02em;
+        color: #404656;
+        margin-bottom: 40px;
+    }
+    &__contaiter{
+        display: flex;
+        flex-direction: column;
+    }
+    &__element{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+    &__name{
+        position: relative;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: -0.02em;
+        color: #777E90;
+    }
+    &__line{
+        margin: 0px 5px;
+        flex-grow: 1;
+        border-bottom: 1px dashed #C9CEDA;
+    }
+    &__value{
+        font-size: 18px;
+        line-height: 18px;
+        color: #777E90;
+        a{
+            text-decoration: underline;
+            text-decoration-color: #3F8167;
+            font-size: 18px;
+            line-height: 18px;
+            color: #777E90;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
+.delivery-block{
+    max-width: 850px;
+    width: 100%;
+    margin: 0px auto;
+    h2{
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: -0.02em;
+        color: #404656;
+    }
+    p{
+        font-size: 18px;
+        line-height: 26px;
+        color: #777E90;
+        margin-bottom: 40px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.scrollbar-inner {
+  .scroll-element{
+    &.scroll-x{
+      height: 4px;
+    }
+    .scroll-bar{
+      background: #404656;
+      border-radius: 4px;
+    }
+    .scroll-element_track{
+      background: #EAEAEB;
+      border-radius: 4px;
+    }
+    &:hover{
+      .scroll-bar{
+        background: #404656;
+        border-radius: 4px;
+      }
+    }
+  }
+}

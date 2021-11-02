@@ -1,7 +1,7 @@
 .search_block {
     &__button {
         cursor: pointer;
-        width: 120px;
+        width: 119px;
         height: 52px;
         border-radius: 8px;
         display: flex;
@@ -17,6 +17,9 @@
         transition: 0.2s ease-in-out;
         @media screen and(max-width: 1366px) {
             width: 58px;
+        }
+        @media screen and(max-width: 1275px) {
+            width: 55px;
         }
         svg {
             transition: 0.2s ease-in-out;
@@ -55,10 +58,10 @@
 
 .search-panel {
     position: absolute;
-    width: 100%;
+    width: calc(100% - 8px);
     height: 100%;
     top: 0px;
-    left: 0px;
+    left: 4px;
     background: #FFFFFF;
     border-radius: 12px;
     z-index: 9;
@@ -127,7 +130,7 @@
     }
     &__button {
         cursor: pointer;
-        min-width: 120px;
+        min-width: 119px;
         background: #3F8167;
         border-radius: 8px;
         display: flex;
@@ -183,7 +186,7 @@
             font-weight: bold;
             font-size: 18px;
             line-height: 26px;
-            color: #777E90;
+            color: #404656;
             white-space: nowrap;
             &:after {
                 width: 12px;
@@ -191,8 +194,6 @@
                 background: url('/img/drop-down.svg') no-repeat;
                 background-size: 12px;
                 background-position: top;
-                /*position: absolute;
-                right: 20px;*/
             }
             &:hover {
                 color: #3F8167;

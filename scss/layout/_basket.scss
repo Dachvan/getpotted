@@ -1,0 +1,37 @@
+.basket-page{
+  &__title{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #404656;
+    margin: 36px 0px 0px;
+  }
+  &__title_2{
+    margin-top: 60px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #404656;
+  }
+  &__text{
+    margin-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #777E90;
+    a{
+      color: #777E90;
+      text-decoration: underline;
+      text-decoration-color: #479275;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}

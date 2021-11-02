@@ -1,0 +1,29 @@
+.comment-block {
+  &__name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    color: #777E90;
+  }
+  &__poly {
+    width: 100%;
+    border: 1px solid #404656;
+    border-radius: 12px;
+    padding: 20px;
+    height: 130px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #404656;
+    resize: none;
+    &::placeholder{
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: -0.02em;
+      color: #C9CEDA;
+    }
+  }
+}
